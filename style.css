@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right, #ed4599 0%, #ff80bf 100%);
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    position: relative;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0px;
+    width: 33px;
+    height: 4px;
+    background: linear-gradient(to right, #ed4599 0%, #ff80bf 100%);
+    border-radius: 5px;
+}
+.inputContainer{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    position: relative;
+}
+.inputContainer input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+}
+.underline::after{
+    background: #ed4599;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+.inputContainer input:focus ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.button{
+    margin: 40px 0 20px 0;
+    height: 50px;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 100%;
+    background: #ed4599;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor:pointer;
+}
+input[type="submit"]:hover{
+    background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
+}
+.optaion{
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.Facebook{
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(to right, #3b5998 0%, #476bb8 100%);
+    margin: 20px 0 15px 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3sec ease;
+}
+.Facebook:hover{
+    background: linear-gradient(to left, #3b5998 0%, #476bb8 100%);
+}
+.twitter{
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(to right, #00acee 0%, #1abeff 100%);
+    margin: 20px 0 50px 0;
+    display: flex;
+    align-items: center;
+}
+.twitter:hover{
+    background: linear-gradient(to left, #00acee 0%, #1abeff 100%);
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 50px;
+}
+i{
+    padding-right: 10px;
+}
